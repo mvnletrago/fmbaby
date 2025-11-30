@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HOME PAGE ================= -->
+<div class="home-page" id="homePage">
+    <h1>Welcome here Babygirl</h1>
+    <p>Select a quiz to begin:</p>
+
+    <div class="card-container">
+
+        <!-- CARD 1 -->
+        <div class="card" onclick="openQuiz(1)">
+            <img src="https://via.placeholder.com/300x150?text=General+Quiz" alt="Quiz 1">
+            <h3>General Knowledge (60 Questions)</h3>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ================= QUIZ PAGE ================= -->
+<div class="quiz-page" id="quizPage">
+    <h2 id="quizTitle"></h2>
+
+    <p id="question"></p>
+
+    <form id="quizForm">
+        <label><input type="radio" name="answer" value="A"> <span id="choiceA"></span></label>
+        <label><input type="radio" name="answer" value="B"> <span id="choiceB"></span></label>
+        <label><input type="radio" name="answer" value="C"> <span id="choiceC"></span></label>
+        <label><input type="radio" name="answer" value="D"> <span id="choiceD"></span></label>
+
+        <button type="button" onclick="checkAnswer()">Submit Answer</button>
+    </form>
+
+    <p id="result"></p>
+
+    <button class="back-btn" onclick="goHome()">Back to Home</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

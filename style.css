@@ -1,0 +1,140 @@
+/* -------------------- GENERAL STYLE -------------------- */
+body {
+    font-family: 'Baloo 2', Arial, sans-serif;
+    background: #e8ecf3;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+* {
+    transition: 0.2s;
+}
+
+/* -------------------- HOME PAGE -------------------- */
+.home-page::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4); /* dark overlay */
+    z-index: 0;
+}
+.home-page {
+    font-family: 'Baloo 2', Arial, sans-serif;
+}
+
+.home-page * {
+    position: relative;
+    z-index: 1; /* ensures text is above the overlay */
+}
+
+.home-page {
+    /* <-- CHANGE YOUR BACKGROUND IMAGE HERE */
+    background-image: url('54bced36-aea3-4a94-8131-78ad95914f41.jpg'); /* Replace this URL with your photo */
+    
+    /* Styling to make it look good */
+    background-size: cover;       /* makes image fill the whole page */
+    background-position: center;  /* centers the image */
+    background-repeat: no-repeat; /* prevents tiling */
+    min-height: 100vh;            /* makes the page full height */
+    color: white;                 /* text color */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* optional: makes text readable */
+    position: relative;           /* needed if using overlay */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 260px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    margin: 0;
+}
+
+/* -------------------- QUIZ PAGE -------------------- */
+.quiz-page {
+    display: none;
+    max-width: 550px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+#question {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    background: #f6f9ff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+label:hover {
+    background: #ebf1ff;
+    border-color: #5a82ff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4978ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #315fff;
+}
+
+.back-btn {
+    margin-top: 15px;
+    background: #555;
+}
+
+.back-btn:hover {
+    background: #333;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
